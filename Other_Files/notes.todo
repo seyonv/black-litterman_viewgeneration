@@ -1,0 +1,15 @@
+-In scrape.py, modify the input csv file to be whichever stock
+list you want to parse it from 
+
+-If you make changes in stocklist_1.csv, make corresponding changes in symb1.m
+
+New Bash_scripts
+ ☐ -save as .sh files
+ ☐ -chmod +x filename (in order to give necessary permission)
+ ☐ ./filename (in order to execute script)
+ ☐ bp (to open bash profile)
+ ☐ create an alias that makes it easier to execute the script
+     ☐ call pwd | pbcopy (to copy current location to clipboard)
+
+Things to Remember
+ ☐ CHANGE to offset=0 in scrape.py
