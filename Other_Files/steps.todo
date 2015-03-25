@@ -1,14 +1,19 @@
 Steps of Code Completion
- ☐ 
- ☐ 
- ☐ 
- ☐ 
+ ☐ Fetch all price data for every assset
+ ☐ (organize bond data(may just use risk-free rate as a benchmark))
+ ☐ distinguish between the stocks and the market index
+ ☐ create the appropriate assertions and tests to ensure that the data is properly organized
+ ☐ Change scrape.py so that it does not get the market cap 
+   for the stock indices(so the last x values in the ticker file)
+ ☐ corresponding with this, ensure that there is no utilization of 
+   
 
  Intermediate Tasks to do
  ☐ Ensure Success_symbols does not contain stocks with no shares outstanding
- ☐ 
- ☐ 
- ☐ 
- ☐ 
+ ☐ Ensure that the rows for each asset correspond to the same date
+ ☐ Be able to choose the start and end date to pick data from 
+ ☐ be able to choose monthly, quarterly or annual data
+ ☐ rename the csv files before parsing so when searching for 
+   a stock's csv file, can only pull up the one created AFTER the delete.py script is called
  ☐ 
  

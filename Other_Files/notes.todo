@@ -2,6 +2,11 @@
 list you want to parse it from 
 
 -If you make changes in stocklist_1.csv, make corresponding changes in symb1.m
+-When you set start to be month 0 year 2000, the program will pull 
+back from December 1999 (so an extra month will be pulled)
+-Note that because the adjusted stock prices are used, the number of shares
+outstanding times the stock price may not necessarily represent 
+the appropriate marketcap of the stock
 
 New Bash_scripts
  ☐ -save as .sh files
@@ -13,3 +18,11 @@ New Bash_scripts
 
 Things to Remember
  ☐ CHANGE to offset=0 in scrape.py
+
+
+Symbol Conversions
+ ☐ tcurrprices -> prices
+ ☐ currpricenames2 -> pricenames
+ ☐ num_assets2 -> Csuccess_assts
+ ☐ catch_assets2 ->Cfail_assets
+ ☐ totalmonths -> totalmonths

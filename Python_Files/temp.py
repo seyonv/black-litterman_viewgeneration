@@ -3,6 +3,7 @@ import requests
 import os
 import csv
 import re
+import urllib2
 
 def parseTickers(file):
     tickers = []
@@ -13,25 +14,61 @@ def parseTickers(file):
     #ticker is an array that holds all symbols from TSX100
     return tickers
 
-
-def scrapYahooPage(ticker):
+# The parameters entereed are the ticker symbol to download and
+# a boolean representing if it is the last or among the last tickers
+# this indicates the stock is an index and a market cap
+# should not be retrieved for it
+def scrapYahooPage(ticker,isindex):
     # craft url query
     stock = ticker
-    # month, day, year
+    
     start_month = '00'
     start_day = '1'
-    start_year = '2013'
+    start_year = '2000'
+
     end_month = '10'
     end_day = '10'
     end_year = '2014'
+
+    # interval is 'm','y' or 'd'
     interval = 'm'
     pg = 0
     lastdate = False
     # open CSV writer
-    csvfile = open('output/scrape/'+ticker+'.csv', 'wb')
+
+    # adding d to this in order to ensure that when calling for file lcoation
+    # there is a difference between csv's in csv_files and the ones
+    # in python_files/output/scrape
+    # 
+    csvfile = open('/Users/User/Desktop/Thesis-Final/Python_Files/output/scrape/d'+ticker+'.csv', 'wb')
     writer = csv.writer(csvfile)
+
+    # fetching the number of outstanding shares for the stock (not an index)
+    if not(isindex):
+        sharesurl = 'http://download.finance.yahoo.com/d/quotes.csv?s=' + stock + '&f=j2'
+        response = urllib2.urlopen(sharesurl)
+        cr = csv.reader(response)
+        # this represents the # of shares outstanding
+        for row in cr:
+            print row[0]
+
+            if (row[0]!='N/A'):
+                a=int(row[0])
+            elif (row[0]=='N/A'):
+                print ('equality condition is here')
+                a=0
+    else:
+        a=2 
+        # set a to an arbitrary value so you can ignore the marketcap
+        # for the stock indices 
+
+        
+
+
     data_available = True
     while data_available:
+        # print a
+
         url = 'https://ca.finance.yahoo.com/q/hp?s=' + stock + '&a=' + start_month + '&b='+start_day+'&c='+start_year + '&d=' + end_month + '&e=' + end_day + '&f='+end_year+'&g='+interval+'&z=66&y='+str(pg)
         r = requests.get(url)
         soup = BeautifulSoup(r.text)
@@ -66,9 +103,10 @@ def scrapYahooPage(ticker):
                           '12': 'Dec'}
             # filter out rows for page end, dividend, split
             exclude = ['Close', 'Dividend', ":", "Split"]
+            priceitemcount=0
             for row in rows:
+                # print a
                 box = row.findAll(text=True)
-                
                 item = ','.join(box)
                 # print(item[0],row)
                 # print(item)
@@ -95,6 +133,7 @@ def scrapYahooPage(ticker):
                         dateitem.append(date)
                     else:
                         dateitem = [date]
+                    priceitemcount=0
 
                 elif '.' in item  and 'Dividend' not in item:
                     # price object
@@ -102,6 +141,7 @@ def scrapYahooPage(ticker):
                     priceitemcount+=1
                     if dateitem and priceitemcount==5 : # add if date has already been set
                         # print(item)
+                        item = item.replace(",", "")
                         priceitem.append(item)
                         priceitemcount=0
 
@@ -112,13 +152,23 @@ def scrapYahooPage(ticker):
                     priceitem = []
                     priceitemcount=0
 
-                
+
                 if dateitem and priceitem:
-                    writer.writerow([dateitem[0], priceitem[0]])
+                    # recall that a represents shares outstanding
+                    #if priceitem[0] < 1 then you want to make it a string instead
+                    #so get_all_stock_data function will return an error
+
+                    if (priceitem[0] > 1):
+                        writer.writerow([dateitem[0], priceitem[0], a*float(priceitem[0])])
+                    else:
+                        print ('priceitem[0] <1')
+                        writer.writerow([dateitem[0],priceitem[0], a*float(priceitem[0])])
+
                     lastdate = dateitem[0]
                     lastmon = lastdate[:3]
                     dateitem = []
                     priceitem = []
+                    priceitemcount=0
 
             pg += 66
             if pg > 594:
@@ -129,9 +179,8 @@ def scrapYahooPage(ticker):
 
 
 # import ticker symbols csv file
-filename = 'input/missingSP500.csv'
-# offset = int(raw_input("Enter an offset to start: "))
-offset=12
+filename = '/Users/User/Desktop/Thesis-Final/Python_Files/input/stocklist_1.csv'
+offset = 0
 index = 0
 
 # loop over each ticker and get data
@@ -149,6 +198,13 @@ for ticker in tickers:
     # now at EQR, 170
     if index >= offset:
         print "Scraping Stock ("+str(index)+"): " + ticker
-        scrapYahooPage(ticker)
+        # look at ticker to determine if it's a stock index or not
+        if ticker in ('LOMMX','VWELX','GSPC','^GSPTSE'):
+            isindex=1;
+            print str(index) + " is a market index or fund, not a stock"
+        else:
+            isindex=0;
+        scrapYahooPage(ticker,isindex)
+    # this index is simply used to only print stocks past the offset
     index += 1
 

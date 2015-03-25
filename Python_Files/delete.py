@@ -1,10 +1,13 @@
 #The Beautiful soup library is responsbile for scraping a webpages HTML text 
 
 from bs4 import BeautifulSoup
+from globalvar import *
 import requests
 import os
 import csv
 import re
+
+
 
 def parseTickers(file):
     tickers = []
@@ -15,10 +18,11 @@ def parseTickers(file):
     #ticker is an array that holds all symbols from TSX100
     return tickers
 
-def deleteDuplicates(ticker):
+def deleteDuplicates(ticker,isindex):
     rows = []
     lastmonth = " "
-    with open('/Users/User/Desktop/Thesis-Final/Python_Files/output/scrape/'+ticker+'.csv', 'rb') as inputfile:
+    scrape_path='/Users/User/Desktop/Thesis-Final/Python_Files/output/scrape/d'
+    with open(scrape_path+ticker+'.csv', 'rb') as inputfile:
         reader = csv.reader(inputfile)
         for row in reader:
             key = (row[0], row[1][:5])
@@ -32,19 +36,13 @@ def deleteDuplicates(ticker):
 
     # modify the write location that the final csv files are saved to
     # previously 'output/scrape/'
-    with open('../csv_files/set1/'+ticker+'.csv', 'wb') as outputfile:
+    set1_path='/Users/User/Desktop/Thesis-Final/csv_files/set1/'
+    with open(set1_path+ticker+'.csv', 'wb') as outputfile:
         writer = csv.writer(outputfile)
         for row in rows:
-            writer.writerow([row[0], row[1],row[2]])
+            writer.writerow([row[0], row[1],row[2],row[3]])
 
-
-
-# import ticker symbols csv file
-filename = '/Users/User/Desktop/Thesis-Final/Python_Files/input/stocklist_1.csv'
-# offset = int(raw_input("Enter an offset to start: "))
-offset=0
 index = 0
-
 # loop over each ticker and get data
 tickers = parseTickers(filename)
 print "Fetching from file: " + filename + "..."
@@ -58,6 +56,11 @@ for ticker in tickers:
     ticker = ticker.replace('.', '-')
     if index>=offset:
         print "Processing Stock ("+str(index)+"): " + ticker
-        deleteDuplicates(ticker)
+        if ticker in ('LOMMX','VWELX','^GSPC','^GSPTSE'):
+            isindex=1;
+            
+        else:
+            isindex=0;
+        deleteDuplicates(ticker,isindex)
     index += 1
 # output to a csv

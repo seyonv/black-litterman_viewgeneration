@@ -1,4 +1,4 @@
-symbols= {
+SP500_symb= {
 'AA'
 'A'
 'AAPL'
@@ -499,12 +499,10 @@ symbols= {
 'YUM'
 'ZION'
 'ZMH'
-'LOMMX'
-'VWELX'
-'^GSPC'};
-symbols=symbols';
+};
+SP500_symb=SP500_symb';
 
-symbols_csv={
+SP500_symb_csv={
     'AA.csv'
     'A.csv'
     'AAPL.csv'
@@ -1005,7 +1003,5 @@ symbols_csv={
     'YUM.csv'
     'ZION.csv'
     'ZMH.csv'
-    'LOMMX.csv'
-    'VWELX.csv'
-    '^GSPC.csv'};
-symbols_csv=symbols_csv';
+    };
+SP500_symb_csv=SP500_symb_csv';

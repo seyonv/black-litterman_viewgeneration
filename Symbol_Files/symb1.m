@@ -1,4 +1,5 @@
-symbols= {'AA'
+symbols= {
+'AA'
 'AAPL'
 'ABC'
 'ABT'
@@ -26,7 +27,8 @@ symbols= {'AA'
 };
 symbols=symbols';
 
-symbols_csv={'AA.csv'
+symbols_csv={
+    'AA.csv'
     'AAPL.csv'
     'ABC.csv'
     'ABT.csv'
