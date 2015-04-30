@@ -48,7 +48,7 @@ function [prices price_names2 volumes marketcaps num_assets catch_assets interva
 			% disp('entered try block')
 			prices{count}=flipud(price{i}(beg_ind:end_ind));
 			volumes{count}=flipud(volume{i}(beg_ind:end_ind));
-			marketcaps{count}=flipud(marketcap{i}(beg_ind:end_ind))
+			marketcaps{count}=flipud(marketcap{i}(beg_ind:end_ind));
 			price_names{count}=success_symbols(i);	
 			count=count+1;	
 			%disp(SP500_symb_csv(i))

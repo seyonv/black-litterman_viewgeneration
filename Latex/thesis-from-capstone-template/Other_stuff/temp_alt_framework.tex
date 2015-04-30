@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Your Paper}
+
+\author{You}
+
+\date{\today}
+
+\begin{document}
+
+\subsection{Alternative Model}
+
+$$ \text{minimize} \sum_{c_1=1}^m \sum_{c_2=1}^m \sum_{i=1}^{n_{c_1}}\sum_{j=1}^{n_{c_2}} \sigma_{ic_1}\sigma_{j_c2}x_{ic_1}x_{jc_2} $$
+
+\begin{align*}
+\qquad\qquad\text{subject to }  \sum_{c=1}^m \sum_{i=1}^{n_{c}}{\mu_{ic}}x_{ic} &\geq \text{R} \\
+\sum_{c=1}^m \sum_{i=1}^{n_{c}}\delta_{ic}x_{ic}&=1\\
+\sum_{c=1}^m \sum_{i=1}^{n_c}ind_{ic}^rx_{ic}  &= indalloc^r \qquad \forall r \in \{Tech, Gold, Oil, etc.\} \\
+\sum_{r=1}^{rtotal} indalloc^r &= 1\\
+\sum_{r=1}^{rtotal} ind_{ic}^r &= 1\\ 
+x_{ic} &\geq 0\\
+\delta_{ic} &= \text{0 or 1}\\
+ind_{ic}^r &= \text{0 or 1}  \qquad \forall r \in \{Tech, Gold, Oil, etc.\} \\
+0 \leq indalloc^r \leq 1 \qquad \forall r \in \{Tech, Gold, Oil, etc.\} \\
+\end{align*}
+$C_0 $ is the set of markets \\
+$m$ is the total number of markets \\
+$I_c$ is the set of available investments in market $c \in C_0$\\
+$n_{c1}$ is the number of assets in market $c1 \in C_0$\\
+$r$ is a set of industries used in the model\\
+$indalloc^r$ is the corresponding desired allocation in each industry \\
+
+
+An alternative framework that was considered was an MVO model that hedged against inflation indirectly by investing in industries that were historically shown to either be unaffected by inflation or to vary positively with it, e.g. gold and oil. Note that these industries are not necessarily the typical sector divisions but stocks can be classified into industry up to the user's choosing. The model also invests in various markets in an effort to hedge against domestic inflation.  
+
+The objective function the objective is minimize the standard portfolio variance which accounts for the covariance of all assets in all markets. The first constraint is the minimum expected return constraint as is the same for MVO but similar to the objective function there is an extra summation to represent the allocation over all markets/currencies. The second constraint is a cardinality constraint that can be removed if desired. It determines which of the assets can be allocated into.  The third constraint is the primary way in which the model would create an inflation-hedged portfolio. By specifying an exact allocation for each industry, the model can invest more weights into assets belonging to industries known to be good inflation hedges. This is assuming that those industries are assigned relatively higher indalloc values. 
+
+	The fourth constraint ensures that the allocated industry weights sum to 1 while the fourth constraint ensures that each asset only belongs to one industry.  The next constraint states that there is no short selling while the next two define the binary variables representing whether an asset is invested in and whether an asset belongs to a particular industry. 
+
+While this model has inherit characteristics that show that it accounts for inflation, it has some flaws. First of, it is not necessarily reliable for the user to do his/her own analysis and assign weights to the industries. It is not necessarily true that all stocks in an industry move the same way for inflation and there may indeed be considerable variation.  However, the ability for the user to specify a particular industry allocation breakdown may be a useful decision characteristic to portfolio managers. 
+
+	The other problem with the model is that it implies that by investing in multiple markets/currencies, that it hedges against inflation risk. While it may hedge against inflation risk in emerging countries such as Turkey it does not truly hedge against inflation risk in developed economic powers such as the United States. This is because the inflation risk present from investing in US markets is not high inflation rates, but rather inflation shocks where the inflation rate quickly rises from a low rate to a substantially higher one. These shocks however are generally cause by global phenomena such as an oil crisis and they affect inflation rates worldwide. Because of the high correlation between global inflation rates during these shocks, the methodology that investing in an internationally diversified portfolio is effective is partially discredited.
+
+\end{document}

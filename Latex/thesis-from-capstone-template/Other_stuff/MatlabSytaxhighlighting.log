@@ -1,0 +1,710 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdftex 2014.5.25)  8 DEC 2014 03:45
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**MatlabSytaxhighlighting.tex
+(./MatlabSytaxhighlighting.tex
+./MatlabSytaxhighlighting.tex:1: Undefined control sequence.
+l.1 \documentclass
+                  {article}
+? 
+./MatlabSytaxhighlighting.tex:1: Emergency stop.
+l.1 \documentclass
+                  {article}
+End of file on the terminal!
+
+./MatlabSytaxhighlighting.tex:1:  ==> Fatal error occurred, no output PDF file 
+produced!
+TeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\enitkv@toks@=\toks16
+\labelindent=\skip44
+\enit@outerparindent=\dimen103
+\enit@toks=\toks17
+\enit@inbox=\box26
+\enitdp@description=\count87
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen104
+\pgfutil@tempdimb=\dimen105
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box27
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks22
+))
+\pgf@x=\dimen108
+\pgf@y=\dimen109
+\pgf@xa=\dimen110
+\pgf@ya=\dimen111
+\pgf@xb=\dimen112
+\pgf@yb=\dimen113
+\pgf@xc=\dimen114
+\pgf@yc=\dimen115
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count89
+\c@pgf@countb=\count90
+\c@pgf@countc=\count91
+\c@pgf@countd=\count92
+\t@pgf@toka=\toks23
+\t@pgf@tokb=\toks24
+\t@pgf@tokc=\toks25
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count93
+\pgfsyssoftpath@bigbuffer@items=\count94
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen116
+\pgfmath@count=\count95
+\pgfmath@box=\box28
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count96
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen117
+\pgf@picmaxx=\dimen118
+\pgf@picminy=\dimen119
+\pgf@picmaxy=\dimen120
+\pgf@pathminx=\dimen121
+\pgf@pathmaxx=\dimen122
+\pgf@pathminy=\dimen123
+\pgf@pathmaxy=\dimen124
+\pgf@xx=\dimen125
+\pgf@xy=\dimen126
+\pgf@yx=\dimen127
+\pgf@yy=\dimen128
+\pgf@zx=\dimen129
+\pgf@zy=\dimen130
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen131
+\pgf@path@lasty=\dimen132
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen133
+\pgf@shorten@start@additional=\dimen134
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count97
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen135
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen136
+\pgf@pt@y=\dimen137
+\pgf@pt@temp=\dimen138
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen139
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen140
+\pgf@sys@shading@range@num=\count98
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box32
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box33
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen141
+\pgf@nodesepend=\dimen142
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen143
+\pgffor@skip=\dimen144
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
+))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count99
+\pgfplotmarksize=\dimen145
+)
+\tikz@lastx=\dimen146
+\tikz@lasty=\dimen147
+\tikz@lastxsaved=\dimen148
+\tikz@lastysaved=\dimen149
+\tikzleveldistance=\dimen150
+\tikzsiblingdistance=\dimen151
+\tikz@figbox=\box34
+\tikz@figbox@bg=\box35
+\tikz@tempbox=\box36
+\tikz@tempbox@bg=\box37
+\tikztreelevel=\count100
+\tikznumberofchildren=\count101
+\tikznumberofcurrentchild=\count102
+\tikz@fig@count=\count103
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count104
+\pgfmatrixcurrentcolumn=\count105
+\pgf@matrix@numberofcolumns=\count106
+)
+\tikz@expandcount=\count107
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count108
+\lst@gtempboxa=\box38
+\lst@token=\toks31
+\lst@length=\count109
+\lst@currlwidth=\dimen152
+\lst@column=\count110
+\lst@pos=\count111
+\lst@lostspace=\dimen153
+\lst@width=\dimen154
+\lst@newlines=\count112
+\lst@lineno=\count113
+\lst@maxwidth=\dimen155
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count114
+\lst@skipnumbers=\count115
+\lst@framebox=\box39
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(./MatlabSytaxhighlighting.aux)
+\openout1 = `MatlabSytaxhighlighting.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+ ABD: EveryShipout initializing macros
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count116
+\scratchdimen=\dimen156
+\scratchbox=\box40
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen157
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks33
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count122
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 38.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 38.
+
+(../Capstone- MATLAB/a.m
+Overfull \hbox (18.24974pt too wide) in paragraph at lines 4--5
+[][][][] 
+ []
+
+
+Overfull \hbox (18.24974pt too wide) in paragraph at lines 19--20
+[][][][] 
+ []
+
+
+Overfull \hbox (18.24974pt too wide) in paragraph at lines 21--22
+[][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+
+Overfull \hbox (18.24974pt too wide) in paragraph at lines 27--28
+[][][][] 
+ []
+
+
+Overfull \hbox (18.24974pt too wide) in paragraph at lines 32--33
+[][][][] 
+ []
+
+
+Overfull \hbox (18.24974pt too wide) in paragraph at lines 35--36
+[][][][] 
+ []
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(../Capstone- MATLAB/create_inflation_hedged_portfolio.m
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 25--26
+[][][][] 
+ []
+
+[2]
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 53--54
+[][][][] 
+ []
+
+
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 73--74
+[][][][] 
+ []
+
+[3]
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 83--84
+[][][][] 
+ []
+
+[4]
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 121--122
+[][][][] 
+ []
+
+[5]
+Overfull \hbox (48.25005pt too wide) in paragraph at lines 160--161
+[][][][] 
+ []
+
+
+Overfull \hbox (66.25023pt too wide) in paragraph at lines 191--192
+[][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 198.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 198.
+ [6] [7] [8]
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 304--305
+[][][][] 
+ []
+
+) (../Capstone- MATLAB/Symbol_Files/thirdSymbols.m)
+(../Capstone- MATLAB/MainProgramFiles/RegimeSwitching_MLE.m [9] [10])
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/all_inflation_data.m)
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/all_riskfree_data.m)
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/all_stock_data.m [11])
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/fetch_inflation_data2.m
+Overfull \hbox (106.25084pt too wide) in paragraph at lines 3--5
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (84.25041pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (120.25078pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (84.25041pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (102.2506pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (84.25041pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 3--5
+[]  
+ []
+
+[12])
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/fetch_regime_inflation_da
+ta.m)
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/fetch_riskfree_data2.m
+Overfull \hbox (106.25084pt too wide) in paragraph at lines 3--5
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (84.25041pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (120.25078pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (84.25041pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (102.2506pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (84.25041pt too wide) in paragraph at lines 3--5
+[][][] 
+ []
+
+
+Overfull \hbox (78.25035pt too wide) in paragraph at lines 3--5
+[]  
+ []
+
+[13])
+(../Capstone- MATLAB/MainProgramFiles/Fetch_Functions/SEC_fetch_stock_data.m
+[14]) (../Capstone- MATLAB/MainProgramFiles/MarkovTreeFunctions/new_exp_inf2.m
+[15])
+(../Capstone- MATLAB/MainProgramFiles/MarkovTreeFunctions/new_exp_infvar2.m
+[16])
+(../Capstone- MATLAB/MainProgramFiles/MarkovTreeFunctions/new_infvar_nodeval.m
+[17])
+(../Capstone- MATLAB/MainProgramFiles/MarkovTreeFunctions/terminal_inflation.m
+[18])
+(../Capstone- MATLAB/MainProgramFiles/MarkovTreeFunctions/terminal_nodes.m)
+(../Capstone- MATLAB/MainProgramFiles/Miscellaneous_functions/divide_interval.m
+) (../Capstone- MATLAB/MainProgramFiles/Miscellaneous_functions/regimecount.m
+[19])
+(../Capstone- MATLAB/MainProgramFiles/Miscellaneous_functions/return_inflation_
+file.m [20])
+(../Capstone- MATLAB/MainProgramFiles/MVO_functions/benchmark_MVO.m [21])
+(../Capstone- MATLAB/MainProgramFiles/MVO_functions/main_MVO.m [22] [23])
+(../Capstone- MATLAB/MainProgramFiles/MVO_functions/MVO_comparison.m [24]
+[25]) (../Capstone- MATLAB/MainProgramFiles/MVO_functions/mvo_params.m)
+(../Capstone- MATLAB/MainProgramFiles/MVO_functions/nominal_parameters.m
+[26]) (../Capstone- MATLAB/MainProgramFiles/MVO_functions/solve_beta3.m
+[27]) (../Capstone- MATLAB/MainProgramFiles/MVO_functions/solve_mvo_params.m)
+(../Capstone- MATLAB/MainProgramFiles/SharpeRatioCalculation/calculateSharpeRat
+io.m
+Overfull \hbox (0.24956pt too wide) in paragraph at lines 5--7
+[][][] 
+ []
+
+
+Overfull \hbox (114.25072pt too wide) in paragraph at lines 15--16
+[][][][] 
+ []
+
+[28])
+(../Capstone- MATLAB/MainProgramFiles/SharpeRatioCalculation/sharperatio2.m)
+[29] (./MatlabSytaxhighlighting.aux) ) 
+Here is how much of TeX's memory you used:
+ 14392 strings out of 493117
+ 277877 string characters out of 6135433
+ 484446 words of memory out of 5000000
+ 17536 multiletter control sequences out of 15000+600000
+ 4413 words of font info for 17 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,6n,54p,425b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb>
+Output written on MatlabSytaxhighlighting.pdf (29 pages, 182138 bytes).
+PDF statistics:
+ 124 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+

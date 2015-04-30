@@ -208,3 +208,66 @@ for ticker in tickers:
     # this index is simply used to only print stocks past the offset
     index += 1
 
+
+# Cprices=fileW1['Cprices']
+# Cvolumes=fileW1['Cvolumes']
+# Cmarketcaps=fileW1['Cmarketcaps']
+# Criskfreevals=fileW1['Criskfreevals']
+# Cinfvals=fileW1['Cinfvals']
+# pricenames=fileW1['pricenames']
+
+
+# # variables used for indexing, size etc. are listed here
+# beg_indices=fileW1['beg_indices']
+# end_indices=fileW1['end_indices']fi
+# balance_it=fileW1['balance_it']
+# indice_size=fileW1['indice_size']
+# preopt_periods=fileW1['preopt_periods']
+# num_rebal=fileW1['num_rebal']
+
+# #representing current period being iterated over
+# balance_it=fileW1['balance_it'] 
+
+# print "oldx stuff"
+# print oldx.shape
+# print oldx
+
+# print "x stuff"
+# print x.shape
+# print x
+# assert (x.shape == y.shape),"size of x and y vectors are not equal"
+# # size_divide 
+# #write function to separate the points into training, validation and test
+# #
+# trainX=x[0:20]
+# validX=x[20:40]
+# testX=x[40:61]
+
+# trainY=y[0:20]
+# validY=y[20:40]
+# testY=y[40:61]
+
+
+# print "-------------PART A(K NearestNeighbors(k=1))-----------------\n"
+# A_predY,MSE_A=kNN1(trainX,trainY,testX,testY)
+# print "MSE on test set: %f" %MSE_A
+
+
+# # use kNN to find the future stock price of a stock based on only the volume as the 
+# # x Vector (the y vector would be the corresponding stock price)
+# #  
+# print "\n/---------PART C(Linear Regression,2 features(including bias))--------"
+# polydegree=1
+# C_weights,C_predY,C_MSE=PolynomialRegression(trainX,trainY,testX,testY,polydegree)
+
+# print C_MSE
+
+
+# # Code to eventually save python variables as a MATLAB workspace
+# # Define the Key(what it's name will be when MATLAB accesses it)
+# # and the value(the variable as saved in python(this must exist already))
+# scipy.io.savemat(writeto, 
+#                mdict={'D_MSE': C_MSE,
+#                      'A_predY':A_predY,
+#                       'MSE_A':MSE_A})
+

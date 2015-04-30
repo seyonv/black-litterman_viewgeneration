@@ -1,4 +1,5 @@
 symbols= {
+'^GSPC'
 'AA'
 'AAPL'
 'ABC'
@@ -21,13 +22,11 @@ symbols= {
 'AIV'
 'AIZ'
 'AKAM'
-'LOMMX'
-'VWELX'
-'^GSPC'
 };
 symbols=symbols';
 
 symbols_csv={
+    '^GSPC.csv'
     'AA.csv'
     'AAPL.csv'
     'ABC.csv'
@@ -50,8 +49,5 @@ symbols_csv={
     'AIV.csv'
     'AIZ.csv'
     'AKAM.csv'
-    'LOMMX.csv'
-    'VWELX.csv'
-    '^GSPC.csv'
-    };
+};
 symbols_csv=symbols_csv';

@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Abstract}{3}
+\contentsline {section}{\numberline {2}Black-Litterman Papers}{4}
+\contentsline {subsection}{\numberline {2.1}\textnormal {}}{4}
+\contentsline {section}{\numberline {3}Unsorted}{4}
+\contentsline {subsection}{\numberline {3.1}\textnormal {Bayesian Portfolio Selection - (Polson, Tew)}}{4}
+\contentsline {subsection}{\numberline {3.2}\textnormal {Black-Litterman Model - Mathematical and behavioural finance approaches - (Mankert)}}{4}
+\contentsline {subsection}{\numberline {3.3}\textnormal {Global Asset Allocation with Equities, Bonds and Currencies - (Black , Litterman)}}{4}
+\contentsline {subsection}{\numberline {3.4}\textnormal {The Black-Litterman Model: Hype or Improvement? - (Salomons)}}{4}
+\contentsline {subsection}{\numberline {3.5}\textnormal {Examples of the use of Data Mining in Financial Applications - (Langdell)}}{4}
+\contentsline {subsection}{\numberline {3.6}\textnormal {Predicting Stock Prices using Data Mining Techniques - (RadaiDeh, Assaf, Alnagi)}}{4}
+\contentsline {subsection}{\numberline {3.7}\textnormal {Review: Application of Data Mining Tools for Stock Market - (Mahajan, Kulkarni0}}{4}
+\contentsline {subsection}{\numberline {3.8}\textnormal {}}{5}
+\contentsline {subsection}{\numberline {3.9}\textnormal {}}{5}
+\contentsline {section}{\numberline {4}Use of Machine Learning in Finance}{6}
+\contentsline {subsection}{\numberline {4.1}\textnormal {A Novel Algorithmic Trading Framework Applying Evolution and Machine Learning for Portfolio Optimization}}{6}
+\contentsline {subsection}{\numberline {4.2}\textnormal {The Elements of Statistical Learning (Hastie, Tibishirani,Friedman}}{6}
+\contentsline {subsection}{\numberline {4.3}\textnormal { Identifying Winning Stocks (Balachandran, Saraph, Ang)}}{6}
+\contentsline {subsection}{\numberline {4.4}\textnormal {Predicting Short-Term Stock returns - (Lochmiller, Chen)}}{6}
+\contentsline {subsection}{\numberline {4.5}\textnormal {Supervised classification-based stock prediction and portfolio optimization - (Aruk, Eryilmaz, Goldberg)}}{6}
+\contentsline {subsection}{\numberline {4.6}\textnormal {Trend Following Trading under a Regime-Switching Model - (Dai, Zhang, Zhu)}}{7}
+\contentsline {subsection}{\numberline {4.7}\textnormal {Assessing Opinion Mining in Trading Stocks - (Nagappan, Dasu)}}{8}
+\contentsline {section}{\numberline {5}Modification Methods to Existing Frameworks}{9}
+\contentsline {subsection}{\numberline {5.1}\textnormal {Examining Portfolio Optimization as a Regression Problem - (Brides)}}{9}
+\contentsline {subsection}{\numberline {5.2}\textnormal {A Step-by-Step Guide to the Black-Litterman Model: incorporating user-specified confidence levels (Idzorek)}}{9}
+\contentsline {subsection}{\numberline {5.3}\textnormal {Enhancing the Black-Litterman and Related Approaches: Views and Stress-test on Risk Factors - (Meucci)}}{9}

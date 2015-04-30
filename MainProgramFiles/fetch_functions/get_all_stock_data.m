@@ -23,7 +23,7 @@ function [month day year price volume marketcap fail_symbols success_symbols] = 
 			[month{sc} day{sc} year{sc} price{sc} volume{sc} marketcap{sc}] = ...
 			 textread(curr_csv ,'%s %d %d %f %d %f','delimiter',',: ');
 			% disp(marketcap{sc});
-			fprintf('current success count value is %d',sc);
+			% fprintf('current success count value is %d',sc);
 			if (marketcap{sc}>1)
 				success_symbols{sc}=curr_symb;
 				% this is to ensure that all the dates are lined up 
@@ -32,8 +32,8 @@ function [month day year price volume marketcap fail_symbols success_symbols] = 
 					disp('i >1');
 					tempbool=isequal(month{sc},month{sc-1});
 					disp(tempbool);
-					fprintf('iteration %d, stock %s and boolean is %d\n',...
-						     i,curr_symb,tempbool);
+					% fprintf('iteration %d, stock %s and boolean is %d\n',...
+					% 	     i,curr_symb,tempbool);
 					
 				end
 				sc=sc+1;

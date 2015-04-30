@@ -8,69 +8,59 @@ import pdb #this is the python debugger
 import matplotlib.pyplot as plt
 from ML_functions import *
 import numpy as np
+from globalpython import *
+from datafunctions import *
 import datetime
 date_string = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M")
 
-from globalpython import *
+
 
 
 # define readfrom path an writeto path
 readfrom = W1_Mat2Py_path
 writeto  = W1_Py2Mat_path
-
 fileW1 = scipy.io.loadmat(readfrom);
-pyVolume=fileW1['Avolume']
-pyPrice=fileW1['Aprice']
+# print fileW1
+# READ & STORE ALL VARIABLES YOU NEED FROM THE MATLAB WORKSPACE
+# All fetched quantitative data is here
+locals().update(fileW1)
 
-# For the first element of Voluem and Price (1 particular stock)
-# perform a kNN analysis
+# This dictionary represents ever element you want to iterate over
+toSciPyList={'Cprices':Cprices, 'Cvolumes':Cvolumes,'Cmarketscaps':Cmarketcaps}
 
-#pyVolume[0,i] is stock i and only 1 row exists
-i=1
-oldx= pyVolume[0,i] #has shape of (62,1)
-oldy= pyPrice[0,i]
+mCprices=toSciPyFormat(Cprices)
+mCvolumes=toSciPyFormat(Cvolumes)
+mCmarketcaps=toSciPyFormat(Cmarketcaps)
+# mCriskfreevals=toSciPyFormat(Criskfreevals)
 
-x=np.array([])
-y=np.array([])
-for i in range(0,oldx.size):
-	x=np.append(x,oldx[i][0])
-
-for i in range(0, oldy.size):
-	y=np.append(y,oldy[i][0])	
-
-assert (x.shape == y.shape),"size of x and y vectors are not equal"
-# size_divide 
-#write function to separate the points into training, validation and test
-#
-trainX=x[0:20]
-validX=x[20:40]
-testX=x[40:61]
-
-trainY=y[0:20]
-validY=y[20:40]
-testY=y[40:61]
+# for key in toSciPyList d = {'a':1, 'b':2}
+# # >>> for key,val in d.items():
+# #         exec(key + '=val'):
+# 	toSciPyList[key]=toSciPyFormat(toSciPyList[key])
+# 	exec ( +'=')
+# 	# print key,toSciPyList[key].shape
+# 	# print 'using key value now'
+# 	# print key,value.shape
+# 	# print
 
 
-print "-------------PART A(K NearestNeighbors(k=1))-----------------\n"
-A_predY,MSE_A=kNN1(trainX,trainY,testX,testY)
-print "MSE on test set: %f" %MSE_A
 
 
-# use kNN to find the future stock price of a stock based on only the volume as the 
-# x Vector (the y vector would be the corresponding stock price)
-#  
-print "\n/---------PART C(Linear Regression,2 features(including bias))--------"
-polydegree=1
-C_weights,C_predY,C_MSE=PolynomialRegression(trainX,trainY,testX,testY,polydegree)
 
-print C_MSE
+# mCpricecol0=column(mCprices,0)
+# now you want to modify Cprices to become mCprices
+# representing that it has been modified by the function
+# and is now useable as part of a feature set in regression, NN
+# or otherwise
+# 
+# Perform this conversion on the list of variables written belw
+# Cprices,Cvolumes,Cmarketcaps,Criskfreevals,Cinfvals
+# 
 
 
-# Code to eventually save python variables as a MATLAB workspace
-# Define the Key(what it's name will be when MATLAB accesses it)
-# and the value(the variable as saved in python(this must exist already))
-scipy.io.savemat(writeto, 
-				 mdict={'D_MSE': C_MSE,
-				 	   'A_predY':A_predY,
-				 	    'MSE_A':MSE_A})
+
+# scipy.io.savemat(writeto, 
+# 				 mdict={'D_MSE': C_MSE,
+# 				 	   'A_predY':A_predY,
+# 				 	    'MSE_A':MSE_A})
 
