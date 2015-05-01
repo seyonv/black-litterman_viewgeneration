@@ -48,7 +48,7 @@ def toSciPyFormat(var,multiasset):
 
 # this essentially reverse the toSciPyFormat function
 # Note that this function might not be needed
-def toMatLabFormat(var):
+# def toMatLabFormat(var):
 
 
 

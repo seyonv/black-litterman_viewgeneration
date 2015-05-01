@@ -18,7 +18,7 @@ date_string = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M")
 
 # define readfrom path an writeto path
 readfrom = W1_Mat2Py_path
-writeto  = W1_Py2Mat_path
+writeto2  = W1_Py2Mat_path
 fileW1 = scipy.io.loadmat(readfrom);
 # print fileW1
 # READ & STORE ALL VARIABLES YOU NEED FROM THE MATLAB WORKSPACE
@@ -26,11 +26,11 @@ fileW1 = scipy.io.loadmat(readfrom);
 locals().update(fileW1)
 
 # This dictionary represents ever element you want to iterate over
-toSciPyList={'Cprices':Cprices, 'Cvolumes':Cvolumes,'Cmarketscaps':Cmarketcaps}
+toSciPyList={'pyCprices':pyCprices, 'pyCvolumes':pyCvolumes,'pyCmarketscaps':pyCmarketcaps}
 
-mCprices=toSciPyFormat(Cprices)
-mCvolumes=toSciPyFormat(Cvolumes)
-mCmarketcaps=toSciPyFormat(Cmarketcaps)
+mCprices=toSciPyFormat(pyCprices,1)
+mCvolumes=toSciPyFormat(pyCvolumes,1)
+mCmarketcaps=toSciPyFormat(pyCmarketcaps,1)
 # mCriskfreevals=toSciPyFormat(Criskfreevals)
 
 # for key in toSciPyList d = {'a':1, 'b':2}
@@ -59,8 +59,11 @@ mCmarketcaps=toSciPyFormat(Cmarketcaps)
 
 
 
-# scipy.io.savemat(writeto, 
-# 				 mdict={'D_MSE': C_MSE,
+# scipy.io.savemat(writeto2, 
+# 				 mdict={'C_MSE': C_MSE,
 # 				 	   'A_predY':A_predY,
 # 				 	    'MSE_A':MSE_A})
 
+scipy.io.savemat(writeto2, 
+				 mdict={'mCprices': mCprices,
+				 	   'mCvolumes':mCvolumes})

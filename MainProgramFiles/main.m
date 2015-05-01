@@ -88,10 +88,10 @@
 	% prefix W stands for a defined workspace and its corresponding #
 	W1_Mat2Py_path=strcat(Mat2Py_path,'/M2Pworkspace1.mat');
 	W1_Py2Mat_path=strcat(Py2Mat_path,'/P2Mworkspace1.mat');
+	
 	% python script execution path
 	first_Pypath=strcat(py_analysis_path,'/firstpy.py');
-	% Trying to call the python script firstpy.py
-	% afterwards, try to pass parameters to the python console.
+
 
 %---STEP 4: doing intermediate calculations for values like moving average
 %---STEP 5: Starting computation for a particuar iteration. Arranging variables--------------
@@ -101,31 +101,33 @@
 	
 	% this while loop ensures that values are being selected to represent
 	% the specific iteration using the number of rebalncing periods as # of iterations
-	while (balance_it<num_rebal)	
-
-
+	% while (balance_it<num_rebal)	
 		prices2=cell2mat(prices);
-		Cprices2=prices2(beg_indices(1):end_indices(1)+1,:);
-		Cprices=num2cell(Cprices2,1)
+		Cprices=prices2(beg_indices(1):end_indices(1)+1,:);
+		pyCprices=num2cell(Cprices,1)
 
 		volumes2=cell2mat(volumes);
-		Cvolumes2=volumes2(beg_indices(1):end_indices(1)+1,:);
-		Cvolumes=num2cell(Cvolumes2,1)		
+		Cvolumes=volumes2(beg_indices(1):end_indices(1)+1,:);
+		pyCvolumes=num2cell(Cvolumes,1)		
 	
 		marketcaps2=cell2mat(marketcaps);
-		Cmarketcaps2=marketcaps2(beg_indices(1):end_indices(1)+1,:);
-		Cmarketcaps=num2cell(Cmarketcaps2,1)
+		Cmarketcaps=marketcaps2(beg_indices(1):end_indices(1)+1,:);
+		pyCmarketcaps=num2cell(Cmarketcaps,1)
 
-		
-		Cinfvals2=infvals(beg_indices(1):end_indices(1)+1,:);
-		Cinfvals=num2cell(Cinfvals2,1)
+		Cinfvals=infvals(beg_indices(1):end_indices(1)+1,:);
+		pyCinfvals=num2cell(Cinfvals,1)
 
-		Criskfreevals2=riskfreevals(beg_indices(1):end_indices(1)+1,:);
-		Criskfreevals=num2cell(Criskfreevals2,1)
+		Criskfreevals=riskfreevals(beg_indices(1):end_indices(1)+1,:);
+		pyCriskfreevals=num2cell(Criskfreevals,1)
 
-		% The final values we care about when running the pyhton script 
+		% Now try and modify the prices to accomodate for rolling averages
+		% create Python variables for 10-day, 50-day rolling averages as well
+		% RETURNS and the covariance matrix so there is no need to convert it in python
+
+
+		% The final values we care about when running the python script 
 		% are Cprices, Cvolumes, Cmarketcaps, Criskfree
-	
+
 
 %---STEP 6: SAVE THE MATLAB WORKSPACE,CALLING PYTHON, WHICH RETURNS WORKSPACE FOR MATLAB TO USE-
 		writeto=W1_Mat2Py_path;
@@ -140,8 +142,10 @@
 		% Load workspace variables created by python script
 		% into MATLAB
 		load(W1_Py2Mat_path);
+		% this is the loop variable used to count if the total number of 
+		% rebalancing periods has been completed yet
 		balance_it=balance_it+1;
-	end
+	% end
 	% Remove both workspaces as they're no longer needed
 	% rm_M2P_call=horzcat('rm ',W1_Mat2Py_path);
 	% rm_P2M_call=horzcat('rm ',W1_Py2Mat_path);
@@ -160,20 +164,21 @@
 	% For now, the rest should remain as is BUT a large bulk fo the computation
 	% should be done in the generate_BL_views function
 	[BL_tau BL_P BL_Q] = generate_BL_views(n_assets)
-	 
-	
+
+
+
+		
 	
 	% Recall that we can treat the computation of BL_expected returns is a 
 	% specific subset of the rpices used over the entire time period
 	% as we are optimizing over multime indepenednet time frames
 	% Therefore, the line belows uses Cprices to attain a specific time 
 	% period as well as convert it to ensure that it is a matrix not a cell array
-	asset_prices=cell2mat(prices);
+	% asset_prices=cell2mat(prices);
 
 	%Parameters are first number of time divisions, then total months
 
-
-	Cprices=asset_prices(beg_indices(1):end_indices(1)+1,:);
+	% Cprices=asset_prices(beg_indices(1):end_indices(1)+1,:);
 
 	% Modify the function below so that you are using prices instead of market
 	% as convention is that market data is the first element of every matrix
@@ -181,7 +186,7 @@
 	% 					   BL_tau, BL_P, BL_Q, end_pred, PE_ratios);
 	
 	[BL_Er, BL_sigma,BL_pi,BL_omega,rac]=...
-		BL_expected_returns(Cprices(:,2:end),Cprices(:,1),Cmarketcaps(2:end),...
+		BL_expected_returns(Cprices(:,2:end),Cprices(:,1),Cmarketcaps(:,2:end),...
 							BL_tau,BL_P,BL_Q);
 
 	%The lines below uses the expected returns computed by black-litterman and implement

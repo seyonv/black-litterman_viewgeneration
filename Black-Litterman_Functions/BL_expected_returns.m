@@ -21,7 +21,7 @@ function [BL_Er, BL_sigma, BL_pi, BL_omega,rac] = ...
     rac = risk_aversion_coefficient;
 
 	%calculating portion investmen in each asset, weighted by market capitalization
-	[cap_weights,available_market_caps]=capweights(market_caps);
+	[cap_weights]=capweights(market_caps);
 
 	%Calculate the implied excess equilibrium return vector (BL_Pi)
 	%This is the Inverse optimization step
