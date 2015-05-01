@@ -1,5 +1,4 @@
--In scrape.py, modify the input csv file to be whichever stock
-list you want to parse it from 
+
 
 -If you make changes in stocklist_1.csv, make corresponding changes in symb1.m
 -When you set start to be month 0 year 2000, the program will pull 
@@ -7,7 +6,8 @@ back from December 1999 (so an extra month will be pulled)
 -Note that because the adjusted stock prices are used, the number of shares
 outstanding times the stock price may not necessarily represent 
 the appropriate marketcap of the stock
-
+-within capweights.m, beacuse the marketcap variable stores the marketcaps
+overtime, pull only the current market caps of each asset into a new variables
 New Bash_scripts
  ☐ -save as .sh files
  ☐ -chmod +x filename (in order to give necessary permission)
@@ -18,6 +18,11 @@ New Bash_scripts
 
 Things to Remember
  ☐ CHANGE to offset=0 in scrape.py
+ ☐ within SEC_fetch_stock_data, modified totalmonths from
+   beg_ind-end_ind to beg_ind-end_int+1
+ ☐ within BL_expected_returns, check if you should be using
+   most recent or latest value of market cap in order to optimize
+
 
 
 Symbol Conversions

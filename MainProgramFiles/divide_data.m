@@ -20,7 +20,8 @@ function [beg_ind end_ind indice_size] =...
 		end_ind=[end_ind; indice_size*i];
 	end
 	%if mod(totalmonths,num_rebal)>0
-	
+	% this portion covesr the last portion to ensure that all remaining time 
+	% periods are stored from interval beg_ind(end) - end_ind(end)
 		beg_ind=[beg_ind; (indice_size*(num_rebal-1)+1)];
 		end_ind=[end_ind; (indice_size*num_rebal+mod(totalmonths,num_rebal))];
 	% end

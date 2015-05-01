@@ -1,9 +1,10 @@
 %STEP 0: DEFINING ALL VARIABLES AND CONVENTIONS USED
 	% prefix A implies it's all the data fetched from the csv files
 	% convention is still A even if cardinality is limited
-	% and a subset of stocks is selected
+	% and a subset of stocks is selected. Therefore, this is the 
+	% meaning of the prefix A NOT being present
 
-	% price, etc. are used to represent data for the period that is
+	% prices, etc. are used to represent data for the entire period that is
 	% being tested over(so it comprise a multitude of iteration periods)
 	% plural notation is always used for multi-dimensional variables
 	% lcase_month,ucase_month used to represent month for stock/(inflation/riskfree
@@ -19,9 +20,9 @@
 	SymbolFile='''symb1.m''';
 	run(eval(SymbolFile));
 
-	% FETCH ALL STOCK, MARKET, INFLATION AND RISKFREE DATA
+	% FETCH ALL STOCK, MARKET, INFLATION AND RISKFREE DATA2
 		% Defining market so that it's the first element in all the cell matrices
-		[Amonth Aday Ayear Aprice Avolume Amarketcap Afail_symbols Asuccess_symbols]=...
+		[Amonth Aday Ayear Aprice Avolume Amarketcap Afail_symbol Asuccess_symbol]=...
 				get_all_stock_data(symbols_csv,symbols);
 
 		[infmonth infyear infprice ] = all_inflation_data('inflation_rate_1200.csv');
@@ -32,9 +33,9 @@
 		if (limit_cardinality)
 			firstlastran=0;
 			cardinality=20; %The desired number of stocks to consider
-			[Amonth,Aday,Ayear,Aprice,Avolume,Amarketcap,Asuccess_symbols]=...
+			[Amonth,Aday,Ayear,Aprice,Avolume,Amarketcap,Asuccess_symbol]=...
 			specify_cardinality(firstlastran,cardinality,Amonth,Aday,Ayear,...
-								Aprice,Avolume,Amarketcap,Asuccess_symbols);	
+								Aprice,Avolume,Amarketcap,Asuccess_symbol);	
 		end
 		
 
@@ -55,7 +56,7 @@
 	% (all for the current iteration)
 	[prices pricenames volumes marketcaps success_assets fail_assets totalmonths] = ...
 			SEC_fetch_stock_data(lcase_month,eyear,lcase_month,syear,...
-				 Amonth,Aday,Ayear,Aprice,Avolume,Amarketcap,Asuccess_symbols);
+				 Amonth,Aday,Ayear,Aprice,Avolume,Amarketcap,Asuccess_symbol);
 
 	% NOW SELECT(SAME DATES), FROM THE INFLATION AND RISK FREE DATA
 	[infvals] = fetch_inflation_data2...
@@ -64,19 +65,20 @@
 	[riskfreevals] = fetch_riskfree_data2...
 	    (ucase_month,eyear,ucase_month,syear,infmonth,infyear,rfprice);
 
-	%DIVIDING THE DATA INTO BEFORE ALLOCAITON AND REBALANCING TIME PERIODS
+	%DIVIDING THE DATA INTO (1) BEFORE ALLOCATION** AND (2) REBALANCING TIME PERIODS
 		%Now select the total selected time period into the periods you want to use before
 		%optimization (and consequently allocation begins ) and the period where the 
 		%allocation of the portfolio is tracked(and rebalancing occurs)
 		preopt_periods=30;
-		% rebalnacing intervals
-		num_rebal=4;
-		% just as in capstone-matlab can call divide_data except the toal months parameter
+		% rebalancing intervals
+		num_rebal=3;
+		% just as in capstone-matlab can call divide_data except the total months parameter
 		% being passed in is reduced by the preopt_periods (pass in totalmonths-preopt_periods)
 		% and add preopt_periods when referencing the period you want
 		[beg_indices end_indices indice_size]=...
 			divide_data(preopt_periods,num_rebal,totalmonths);
 		balance_it=0; %define the current balancing period that you're on
+
 %---STEP 3: DEFINING ALL PATH VARIABLES USED IN PROGRAM, saving MAT workspace & calling python--
 	thesis_path=['/Users/User/Desktop/Thesis-Final'];
 	main_path=strcat(thesis_path,'/MainProgramFiles');
@@ -91,8 +93,8 @@
 	% Trying to call the python script firstpy.py
 	% afterwards, try to pass parameters to the python console.
 
-%------------STEP 4: doing intermediate calculations for values like moving average
-%------------STEP 5: Starting computation for a particuar iteration. Arranging variables--------------
+%---STEP 4: doing intermediate calculations for values like moving average
+%---STEP 5: Starting computation for a particuar iteration. Arranging variables--------------
 	% Use the beg_indices, end_indices to determine the particular index range
 	% you're using for the current iteration. It will be some fac
 	%Choosing hte subset of each quantiative data source we want to use for the iteration
@@ -114,7 +116,7 @@
 		Cmarketcaps2=marketcaps2(beg_indices(1):end_indices(1)+1,:);
 		Cmarketcaps=num2cell(Cmarketcaps2,1)
 
-		d
+		
 		Cinfvals2=infvals(beg_indices(1):end_indices(1)+1,:);
 		Cinfvals=num2cell(Cinfvals2,1)
 
@@ -125,7 +127,7 @@
 		% are Cprices, Cvolumes, Cmarketcaps, Criskfree
 	
 
-%---SAVE THE MATLAB WORKSPACE,CALLING PYTHON, WHICH RETURNS WORKSPACE FOR MATLAB TO USE-
+%---STEP 6: SAVE THE MATLAB WORKSPACE,CALLING PYTHON, WHICH RETURNS WORKSPACE FOR MATLAB TO USE-
 		writeto=W1_Mat2Py_path;
 		save(writeto);
 
@@ -149,30 +151,51 @@
 	%Retrieve the variables from the python workspace
 	% save(workspace_path¡,'-v6');
 	% save('myfile.mat','-v6')
-% ----------------------------------------------------------------
 
 
-
-% ----------------------------------------------------------------
-% Black-litterman Function Calls
+%---STEP 7: BLACK-LITTERMAN COMPUTATION STARTS HERE(function calls defined below)--------
 	% undefined price variable defined here
-	n_assets=size(prices,2) %this should be equal to success_assets
+	n_assets=size(prices,2)-1
+	 %this should be equal to success_assets (minus 1 for market)
 	% For now, the rest should remain as is BUT a large bulk fo the computation
 	% should be done in the generate_BL_views function
 	[BL_tau BL_P BL_Q] = generate_BL_views(n_assets)
 	 
+	
+	
+	% Recall that we can treat the computation of BL_expected returns is a 
+	% specific subset of the rpices used over the entire time period
+	% as we are optimizing over multime indepenednet time frames
+	% Therefore, the line belows uses Cprices to attain a specific time 
+	% period as well as convert it to ensure that it is a matrix not a cell array
+	asset_prices=cell2mat(prices);
+
+	%Parameters are first number of time divisions, then total months
+
+
+	Cprices=asset_prices(beg_indices(1):end_indices(1)+1,:);
+
+	% Modify the function below so that you are using prices instead of market
+	% as convention is that market data is the first element of every matrix
+	% BL_expected_returns(prices, market, market_caps,...
+	% 					   BL_tau, BL_P, BL_Q, end_pred, PE_ratios);
+	
 	[BL_Er, BL_sigma,BL_pi,BL_omega,rac]=...
-	BL_expected_returns(prices, market, market_caps,...
-						   BL_tau, BL_P, BL_Q, end_pred, PE_ratios);
+		BL_expected_returns(Cprices(:,2:end),Cprices(:,1),Cmarketcaps(2:end),...
+							BL_tau,BL_P,BL_Q);
 
 	%The lines below uses the expected returns computed by black-litterman and implement
 	%Mean-variance optimization equation by using BL_Er for expected returns
 
-	[BL_x,BL_var,BL_portfolio_returns,BL_portfolio_prices]=...
-	Black_Litterman(price,min_days,end_pred,initial_wealth,...
-	desired_return_range,BL_Er,BL_sigma,rac);
-	plot(1:length(BL_portfolio_returns),BL_portfolio_returns,'-k');
-	title('Comparing Returns of Optimal Portfolios created with MVO & Black-Litterman')
-	xlabel('Time (in Days)')
-	ylabel('Daily Return of Portfolio')
-	hold all
+	% Set the desired_return parameter to the constraint for MVO
+	desired_return=0.007
+	[BL_x,BL_var]=...
+		Black_Litterman(Cprices(:,2:end),desired_return,BL_Er,BL_sigma,rac);
+
+	
+	% Now plot how the Black-Litterman Allocation does over time in comparison to 
+	% plot(1:length(BL_portfolio_returns),BL_portfolio_returns,'-k');
+	% title('Comparing Returns of Optimal Portfolios created with MVO & Black-Litterman')
+	% xlabel('Time (in Days)')
+	% ylabel('Daily Return of Portfolio')
+	% hold all

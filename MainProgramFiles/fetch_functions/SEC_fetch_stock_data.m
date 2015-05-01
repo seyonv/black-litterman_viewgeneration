@@ -34,7 +34,7 @@ function [prices price_names2 volumes marketcaps num_assets catch_assets interva
 			end_ind=x(i);
 		end
 	end
-	interval_size=end_ind-beg_ind;
+	interval_size=end_ind-beg_ind+1;
 %-------------AFTER FINDING THE INDICES ITERATE THROUGH ASSETS TO GET PRICE DATA ----
 	count=1;
 	catch_assets=1; %why does catch_assets start at 1 and not at 0

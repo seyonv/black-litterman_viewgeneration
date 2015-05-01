@@ -1,5 +1,4 @@
-% This is the functions that generates the Black-litterman 
-% views.
+% This is the functions that generates the Black-litterman views.
 % It calls a function that generates the correct size tempalte initially
 % make sure to write assertions to make certain that the size of the matrices
 % are what they should be
@@ -25,7 +24,8 @@ BL_P = [1 0 0 0 0 0 0 0;
 %(next add random generation of 1 & -1)
 BL_P=[1 0 0; 1 -1 0; 1 0 -1]
 while (size(BL_P,2)<n_assets)
-  BL_P=[BL_P zeros(3,1)];
+  %appends column vector of 0's to the end until dimension requirement is met
+  BL_P=[BL_P zeros(3,1)]; 
 end
 
  
